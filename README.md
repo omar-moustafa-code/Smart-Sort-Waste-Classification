@@ -237,4 +237,4 @@ This project would not have been possible without the support of:
 
 ## License
 
-This repository is shared for academic and research purposes. Please contact the authors for any commercial use inquiries.
+This repository is shared for academic and research purposes.
