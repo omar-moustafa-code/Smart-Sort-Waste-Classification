@@ -46,15 +46,16 @@ Input Image
              │ Single component
              ▼
 ┌─────────────────────────┐
-│  Stage 3a: Recyclable   │──► NON-RECYCLABLE → General waste bin (Code 7)
+│  Stage 3: Recyclable   │──► NON-RECYCLABLE → General waste bin (Code 7)
 │  Classification         │
 └────────────┬────────────┘
              │ Recyclable
              ▼
-┌─────────────────────────┐    Code 3 → Plastic compartment
-│  Stage 3b: Material     │    Code 4 → Paper compartment
-│  Classification         │    Code 5 → Organic compartment
+┌─────────────────────────┐    Code 3 → Plastic recyclable compartment
+│  Stage 4: Material      │    Code 4 → Paper recyclable compartment
+│  Classification         │    Code 5 → Organic recyclable compartment
 └─────────────────────────┘    Code 6 → Other recyclable compartment
+                               Code 7 → Non-recyclable compartment
 ```
 
 **Decision Codes:**
