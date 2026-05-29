@@ -90,8 +90,6 @@ smartsort/
 └── README.md
 ```
 
-> **Note:** Model training notebooks are not included in this repository. The files above represent the final inference pipeline and pre-trained model weights only.
-
 ---
 
 ## Getting Started
