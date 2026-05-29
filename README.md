@@ -77,11 +77,11 @@ Input Image
 ```
 smartsort/
 │
-├── models/
+├── models/                                     # ⚠️ Weights not included — see note below
 │   ├── final_adjusted_liquid_advance.h5        # Liquid detection model (DenseNet121)
 │   ├── component_model_fixed_v3.h5             # Component detection model (MobileNetV2)
 │   ├── DenseNet121_binary_v2.keras             # Recyclability classifier (DenseNet121)
-│   └── xception_4classes.keras                # Material classifier (Xception)
+│   └── xception_4classes.keras                 # Material classifier (Xception)
 │
 ├── notebooks/
 │   └── smart_waste_bin_pipeline_may22.ipynb   # Unified inference pipeline (Google Colab)
@@ -89,6 +89,15 @@ smartsort/
 ├── requirements.txt                           # Full dependency list
 └── README.md
 ```
+
+> ⚠️ **Model weights are not included in this repository** due to file size constraints.
+> To run the pipeline, you will need the following four files:
+> - `final_adjusted_liquid_advance.h5`
+> - `component_model_fixed_v3.h5`
+> - `DenseNet121_binary_v2.keras`
+> - `xception_4classes.keras`
+>
+> Contact the authors for access.
 
 ---
 
