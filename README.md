@@ -165,7 +165,7 @@ CATEGORY_MODEL_PATH  = 'xception_4classes.keras'
 ## Models
 
 ### Liquid Detection — `final_adjusted_liquid_advance.h5`
-- **Architecture:** DenseNet121 (transfer learning)
+- **Architecture:** MobileNetV2 (transfer learning)
 - **Task:** Binary classification — liquid vs. non-liquid content
 - **Input:** 224 × 224 RGB image
 - **Threshold:** 0.5 (raw score < 0.5 → liquid detected)
