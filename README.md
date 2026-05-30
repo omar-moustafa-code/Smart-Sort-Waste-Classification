@@ -1,4 +1,4 @@
-# 🗑️ SmartSort: Multi-Task Deep Learning System for Automated Waste Sorting
+# SmartSort: Multi-Task Deep Learning System for Automated Waste Sorting
 
 <p align="center">
   <img src="images/prototype_design.png" width="850"/>
