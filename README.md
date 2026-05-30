@@ -1,4 +1,4 @@
-# 🗑️ SmartSort: Multi-Task Deep Learning System for Automated Waste Sorting
+# SmartSort: Multi-Task Deep Learning System for Automated Waste Sorting
 
 > A senior thesis project by **Omar Moustafa**, **Malak Elsayed**, and **Nour Kahky**  
 > Department of Mathematics and Actuarial Science, The American University in Cairo  
@@ -25,7 +25,7 @@ This research was funded by Nestlé and Dawar, and culminated in a **physical sm
 
 ## Pipeline Architecture
 
-The pipeline processes each input image through three sequential stages:
+The pipeline processes each input image through four sequential stages:
 
 ```
 Input Image
@@ -44,13 +44,13 @@ Input Image
              │ Single component
              ▼
 ┌─────────────────────────┐
-│  Stage 3a: Recyclable   │──► NON-RECYCLABLE → General waste bin (Code 7)
+│  Stage 3: Recyclable    │──► NON-RECYCLABLE → General waste bin (Code 7)
 │  Classification         │
 └────────────┬────────────┘
              │ Recyclable
              ▼
 ┌─────────────────────────┐    Code 3 → Plastic compartment
-│  Stage 3b: Material     │    Code 4 → Paper compartment
+│  Stage 4: Material      │    Code 4 → Paper compartment
 │  Classification         │    Code 5 → Organic compartment
 └─────────────────────────┘    Code 6 → Other recyclable compartment
 ```
