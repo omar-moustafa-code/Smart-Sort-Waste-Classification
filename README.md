@@ -1,13 +1,5 @@
 # SmartSort: Multi-Task Deep Learning System for Automated Waste Sorting
 
-<p align="center">
-  <img src="images/prototype_design.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>SmartSort physical smart bin prototype developed in collaboration with Nestlé, Dawar, AUC's Eltoukhy Learning Factory, and MakersGate.</em>
-</p>
-
 > A data science senior thesis project by **Omar Moustafa**, **Malak Elsayed**, & **Nour Kahky**  
 > Department of Mathematics and Actuarial Science, The American University in Cairo  
 > Advised by **Dr. Noha Youssef** · In collaboration with **Nestlé** and **Dawar**
@@ -67,9 +59,9 @@ smartsort/
 │   └── prototype_design.png                   # Physical smart bin prototype
 │
 ├── models/                                    # ⚠️ Weights not included — see note below
-│   ├── final_adjusted_liquid_advance.h5        # Liquid detection model (MobileNetV2)
-│   ├── component_model_fixed_v3.h5             # Component detection model (MobileNetV2)
-│   ├── DenseNet121_binary_v2.keras             # Recyclability classifier (DenseNet121)
+│   ├── final_adjusted_liquid_advance.h5       # Liquid detection model (MobileNetV2)
+│   ├── component_model_fixed_v3.h5            # Component detection model (MobileNetV2)
+│   ├── DenseNet121_binary_v2.keras            # Recyclability classifier (DenseNet121)
 │   └── xception_4classes.keras                # Material classifier (Xception)
 │
 ├── notebooks/
