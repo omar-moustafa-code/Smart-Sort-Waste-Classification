@@ -33,6 +33,8 @@ This research was funded by Nestlé and Dawar, and culminated in a **physical sm
 
 ## Pipeline Architecture
 
+The pipeline processes each input image through four sequential stages, as illustrated by the following figure:
+
 <p align="center">
   <img src="images/system_architecture.png" width="900"/>
 </p>
@@ -40,36 +42,6 @@ This research was funded by Nestlé and Dawar, and culminated in a **physical sm
 <p align="center">
   <em>Figure 1. Sequential multi-stage SmartSort waste classification pipeline.</em>
 </p>
-
-The pipeline processes each input image through three sequential stages:
-
-```
-Input Image
-     │
-     ▼
-┌─────────────────────────┐
-│  Stage 1: Liquid        │──► LIQUID DETECTED → "Please empty liquid" (Code 1)
-│  Detection              │
-└────────────┬────────────┘
-             │ No liquid
-             ▼
-┌─────────────────────────┐
-│  Stage 2: Component     │──► MULTI-COMPONENT → "Separate components" (Code 2)
-│  Detection              │
-└────────────┬────────────┘
-             │ Single component
-             ▼
-┌─────────────────────────┐
-│  Stage 3: Recyclable    │──► NON-RECYCLABLE → General waste bin (Code 7)
-│  Classification         │
-└────────────┬────────────┘
-             │ Recyclable
-             ▼
-┌─────────────────────────┐    Code 3 → Plastic compartment
-│  Stage 3b: Material     │    Code 4 → Paper compartment
-│  Classification         │    Code 5 → Organic compartment
-└─────────────────────────┘    Code 6 → Other recyclable compartment
-```
 
 **Decision Codes:**
 
