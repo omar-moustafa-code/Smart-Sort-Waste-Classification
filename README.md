@@ -4,7 +4,7 @@ Multi-task deep learning pipeline for automated waste sorting — classifies inc
 
 > A senior thesis project by **Omar Moustafa**, **Malak Elsayed**, & **Nour Kahky**  
 > Department of Mathematics and Actuarial Science, The American University in Cairo  
-> Advised by **Dr. Noha Youssef** · In collaboration with **Nestlé** and **Dawar**
+> Supervised by **Dr. Noha Youssef** · In collaboration with **Nestlé** and **Dawar**
 
 ---
 
