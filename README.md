@@ -1,4 +1,4 @@
-# SmartSort: Multi-Task Deep Learning System for Automated Waste Classification & Sorting
+# Multi-Task Deep Learning System for Automated Waste Classification & Sorting
 
 > A data science senior thesis project by **Omar Moustafa**, **Malak Elsayed**, & **Nour Kahky**  
 > Department of Mathematics and Actuarial Science, The American University in Cairo  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-SmartSort is an end-to-end deep learning pipeline that automatically analyzes incoming waste from a single image and classifies it across four critical dimensions:
+Thus is an end-to-end deep learning pipeline that automatically analyzes incoming waste from a single image and classifies it across four critical dimensions:
 
 | Task | Model Architecture | Validation Accuracy |
 |---|---|---|
