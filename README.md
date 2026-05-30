@@ -1,6 +1,14 @@
-# SmartSort: Multi-Task Deep Learning System for Automated Waste Sorting
+# 🗑️ SmartSort: Multi-Task Deep Learning System for Automated Waste Sorting
 
-> A senior thesis project by **Omar Moustafa**, **Malak Elsayed**, and **Nour Kahky**  
+<p align="center">
+  <img src="images/prototype_design.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>SmartSort physical smart bin prototype developed in collaboration with Nestlé, Dawar, AUC's Eltoukhy Learning Factory, and MakersGate.</em>
+</p>
+
+> A senior thesis project by **Omar Moustafa**, **Malak Elsayed**, & **Nour Kahky**  
 > Department of Mathematics and Actuarial Science, The American University in Cairo  
 > Advised by **Dr. Noha Youssef** · In collaboration with **Nestlé** and **Dawar**
 
@@ -12,7 +20,7 @@ SmartSort is an end-to-end deep learning pipeline that automatically analyzes in
 
 | Task | Model Architecture | Validation Accuracy |
 |---|---|---|
-| Liquid Detection | DenseNet121 | 94.7% |
+| Liquid Detection | MobileNetV2 | 94.7% |
 | Single vs. Multi-Component Detection | MobileNetV2 | 94.5% |
 | Recyclable vs. Non-Recyclable Classification | DenseNet121 | 96.8% |
 | Waste Material Classification | Xception | 94.3% |
@@ -25,7 +33,15 @@ This research was funded by Nestlé and Dawar, and culminated in a **physical sm
 
 ## Pipeline Architecture
 
-The pipeline processes each input image through four sequential stages:
+<p align="center">
+  <img src="images/system_architecture.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 1. Sequential multi-stage SmartSort waste classification pipeline.</em>
+</p>
+
+The pipeline processes each input image through three sequential stages:
 
 ```
 Input Image
@@ -50,7 +66,7 @@ Input Image
              │ Recyclable
              ▼
 ┌─────────────────────────┐    Code 3 → Plastic compartment
-│  Stage 4: Material      │    Code 4 → Paper compartment
+│  Stage 3b: Material     │    Code 4 → Paper compartment
 │  Classification         │    Code 5 → Organic compartment
 └─────────────────────────┘    Code 6 → Other recyclable compartment
 ```
@@ -74,8 +90,12 @@ Input Image
 ```
 smartsort/
 │
-├── models/
-│   ├── final_adjusted_liquid_advance.h5        # Liquid detection model (DenseNet121)
+├── images/
+│   ├── system_architecture.png                # Pipeline architecture diagram
+│   └── prototype_design.png                   # Physical smart bin prototype
+│
+├── models/                                    # ⚠️ Weights not included — see note below
+│   ├── final_adjusted_liquid_advance.h5        # Liquid detection model (MobileNetV2)
 │   ├── component_model_fixed_v3.h5             # Component detection model (MobileNetV2)
 │   ├── DenseNet121_binary_v2.keras             # Recyclability classifier (DenseNet121)
 │   └── xception_4classes.keras                # Material classifier (Xception)
@@ -87,7 +107,15 @@ smartsort/
 └── README.md
 ```
 
-> **Note:** Model training notebooks are not included in this repository. The files above represent the final inference pipeline and pre-trained model weights only.
+> ⚠️ **Model weights are not included in this repository** due to file size constraints.
+> To run the pipeline, you will need the following four files:
+>
+> - `final_adjusted_liquid_advance.h5`
+> - `component_model_fixed_v3.h5`
+> - `DenseNet121_binary_v2.keras`
+> - `xception_4classes.keras`
+>
+> Contact the authors for access.
 
 ---
 
@@ -155,23 +183,27 @@ CATEGORY_MODEL_PATH  = 'xception_4classes.keras'
 ## Models
 
 ### Liquid Detection — `final_adjusted_liquid_advance.h5`
+
 - **Architecture:** MobileNetV2 (transfer learning)
 - **Task:** Binary classification — liquid vs. non-liquid content
 - **Input:** 224 × 224 RGB image
 - **Threshold:** 0.5 (raw score < 0.5 → liquid detected)
 
 ### Component Detection — `component_model_fixed_v3.h5`
+
 - **Architecture:** MobileNetV2 (transfer learning)
 - **Task:** Binary classification — single vs. multi-component item (e.g., paper cup with plastic lid)
 - **Input:** 224 × 224 RGB image
 - **Threshold:** 0.5 (raw score < 0.5 → multi-component detected)
 
 ### Recyclability Classifier — `DenseNet121_binary_v2.keras`
+
 - **Architecture:** DenseNet121 (transfer learning)
 - **Task:** Binary classification — recyclable vs. non-recyclable
 - **Input:** 224 × 224 RGB image, DenseNet preprocessing
 
 ### Material Classifier — `xception_4classes.keras`
+
 - **Architecture:** Xception (transfer learning)
 - **Task:** Multi-class classification — Paper, Plastic, Organic, or Other
 - **Input:** 299 × 299 RGB image, Xception preprocessing
@@ -211,6 +243,14 @@ External real-world validation data was provided by **Dawar**, an Egyptian waste
 ---
 
 ## Physical Prototype
+
+<p align="center">
+  <img src="images/prototype_design.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 2. Physical SmartSort prototype developed in collaboration with AUC's Eltoukhy Learning Factory and MakersGate.</em>
+</p>
 
 Beyond the software pipeline, this project was extended into a **real-world smart bin prototype** funded by Nestlé and Dawar, and fabricated by AUC's **Eltoukhy Learning Factory** and **MakersGate**. The prototype integrates:
 
