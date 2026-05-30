@@ -8,7 +8,7 @@
 
 ## Overview
 
-Thus is an end-to-end deep learning pipeline that automatically analyzes incoming waste from a single image and classifies it across four critical dimensions:
+This is an end-to-end deep learning pipeline that automatically analyzes incoming waste from a single image and classifies it across four critical dimensions:
 
 | Task | Model Architecture | Validation Accuracy |
 |---|---|---|
